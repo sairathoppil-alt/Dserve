@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Samsung", href: "/samsung" },
   { label: "Voltas", href: "/voltas" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         <div className="h-24 flex items-center justify-between">
 
-          {/* LOGO */}
+          {/* Logo */}
           <Link href="/" className="flex items-center">
 
             <Image
@@ -62,7 +63,7 @@ export default function Navbar() {
 
           </Link>
 
-          {/* RIGHT ALIGNED NAVIGATION */}
+          {/* Navigation */}
           <nav className="hidden md:flex items-center gap-12 ml-auto">
 
             {NAV_LINKS.map((link) => (
