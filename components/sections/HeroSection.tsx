@@ -67,6 +67,7 @@ export default function HeroSection() {
                 leading-[0.95] tracking-tight
               `}
             >
+              <br></br>
               DESERVE THE BEST
             </h1>
             <p className="mt-5 text-lg sm:text-xl lg:text-2xl text-zinc-300 font-light tracking-wide">
