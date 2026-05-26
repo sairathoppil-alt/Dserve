@@ -35,7 +35,7 @@ export default function AboutSection() {
                 font-bold tracking-tight text-zinc-900
                 leading-[1.05]
               ">
-                Smart Air Conditioning Solutions For Modern Spaces
+              Smart & Intelligent Air Conditioning Solutions For Modern Spaces
               </h4>
 
               {/* Paragraphs */}
