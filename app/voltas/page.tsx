@@ -21,18 +21,27 @@ const solutions = [
   {
     title: "VRF Air Conditioning Systems",
     text: "Flexible multi-zone cooling solutions for modern commercial buildings.",
+    image: "/images/vrf-systems.png",
   },
   {
     title: "Commercial Chiller Systems",
     text: "Centralized cooling systems engineered for reliable large-scale performance.",
+    image: "/images/commercial-chillers.png",
   },
   {
     title: "Ducted & Package AC Systems",
     text: "Efficient concealed cooling solutions for commercial interiors.",
+    image: "/images/ducted-package-ac.png",
   },
   {
     title: "Cassette & Tower Air Conditioners",
     text: "High airflow commercial AC systems with flexible installation options.",
+    image: "/images/cassette-tower-ac.png",
+  },
+  {
+    title: "Slim One Way Cassette Systems",
+    text: "Minimal ceiling-mounted cooling systems designed for premium modern interiors.",
+    image: "/images/slim-oneway-cassette.png",
   },
 ];
 
@@ -55,6 +64,8 @@ export default function VoltasPage() {
         />
 
         <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
+
+        <div className="absolute bottom-[-300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-red-600/10 blur-[160px]" />
 
       </div>
 
@@ -169,8 +180,8 @@ export default function VoltasPage() {
 
       </section>
 
-      {/* Solutions */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-28">
+      {/* SOLUTIONS */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-20 sm:pb-28 lg:pb-32">
 
         <div className="max-w-7xl mx-auto">
 
@@ -191,61 +202,87 @@ export default function VoltasPage() {
 
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {/* Dynamic Sliding Layout */}
+          <div className="flex flex-col gap-6">
 
             {solutions.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.7,
                   delay: index * 0.08,
                 }}
                 viewport={{ once: true }}
-                className="
+                className={`
                   group
+                  relative
                   overflow-hidden
-                  rounded-2xl sm:rounded-3xl
+                  rounded-[30px]
                   border border-white/10
                   bg-white/[0.03]
+                  backdrop-blur-xl
                   hover:bg-white/[0.05]
                   transition-all duration-500
-                "
+                  flex flex-col lg:flex-row
+                  min-h-[320px]
+                  ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}
+                `}
               >
 
                 {/* Image */}
-                <div className="relative overflow-hidden">
+                <div className="relative lg:w-[52%] overflow-hidden">
 
                   <Image
-                    src={`/images/solution-${index + 1}.jpg`}
+                    src={item.image}
                     alt={item.title}
                     width={1200}
-                    height={800}
+                    height={900}
                     className="
                       w-full
-                      h-56 sm:h-72
+                      h-[260px]
+                      lg:h-full
                       object-cover
                       transition-transform duration-700
                       group-hover:scale-105
                     "
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
 
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-8">
+                <div className="relative flex-1 flex items-center">
 
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3">
-                    {item.title}
-                  </h3>
+                  <div className="p-8 sm:p-10 lg:p-14">
 
-                  <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
-                    {item.text}
-                  </p>
+                    <div className="flex items-center gap-4 mb-5">
 
+                      <div className="w-10 h-[2px] bg-red-500" />
+
+                      <span className="text-xs uppercase tracking-[0.25em] text-red-400">
+                        Solution {index + 1}
+                      </span>
+
+                    </div>
+
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-5">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-zinc-400 leading-relaxed text-sm sm:text-base max-w-xl">
+                      {item.text}
+                    </p>
+
+                  </div>
+
+                </div>
+
+                {/* Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-500/5 via-transparent to-transparent" />
                 </div>
 
               </motion.div>
@@ -257,7 +294,7 @@ export default function VoltasPage() {
 
       </section>
 
-      {/* Advantages */}
+      {/* ADVANTAGES */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-20 sm:pb-28 lg:pb-32">
 
         <div className="max-w-7xl mx-auto">
