@@ -31,7 +31,7 @@ const solutions = [
   {
     title: "Ducted & Package AC Systems",
     text: "Efficient concealed cooling solutions for commercial interiors.",
-    image: "/images/ducted-package-ac.png",
+    image: "/images/ducted-package-ac1.png",
   },
   {
     title: "VRF Air Conditioning Systems",
