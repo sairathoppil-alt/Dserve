@@ -6,352 +6,170 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+const advantages = [
+  "Trusted Indian engineering expertise",
+  "Commercial cooling infrastructure solutions",
+  "Energy-conscious HVAC technologies",
+  "High ambient cooling performance",
+  "Scalable commercial systems",
+  "Reliable industrial-grade operation",
+  "Wide commercial product portfolio",
+  "Service and maintenance support",
+];
+
+const solutions = [
+  {
+    title: "VRF Air Conditioning Systems",
+    text: "Voltas VRF systems provide multi-zone climate control for commercial buildings requiring flexible and efficient cooling infrastructure.",
+  },
+  {
+    title: "Commercial Chiller Systems",
+    text: "Voltas chiller systems are designed for centralized cooling applications where consistent thermal performance and operational reliability are important.",
+  },
+  {
+    title: "Ducted & Package AC Systems",
+    text: "Voltas ducted and package systems provide efficient cooling for large commercial interiors while supporting clean architectural aesthetics.",
+  },
+  {
+    title: "Cassette & Tower Air Conditioners",
+    text: "Commercial cassette and tower AC systems are suitable for business environments requiring efficient airflow and flexible installation.",
+  },
+];
+
+const services = [
+  "Commercial HVAC planning and consultation",
+  "Thermal load analysis",
+  "Ventilation and duct design",
+  "HVAC installation and execution",
+  "Preventive maintenance and AMC",
+  "Industrial cooling solutions",
+  "HVAC modernization and efficiency upgrades",
+];
+
 export default function VoltasPage() {
   return (
-    <main
-      className="
-        relative
-        min-h-screen
-        overflow-hidden
-        bg-[#0a0a0a]
-        text-white
-      "
-    >
+    <main className="relative min-h-screen overflow-hidden bg-[#0a0a0a] text-white">
 
       <Navbar />
 
       {/* Background */}
-      <div className="absolute inset-0">
-
-        {/* Grid */}
+      <div className="absolute inset-0 pointer-events-none">
         <div
-          className="
-            absolute inset-0
-            opacity-[0.03]
-          "
+          className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
             backgroundSize: "90px 90px",
           }}
         />
-
-        {/* Ambient Glow */}
-        <div className="
-          absolute
-          top-[-200px]
-          left-[-100px]
-          w-[420px]
-          h-[420px]
-          rounded-full
-          bg-red-700/10
-          blur-[140px]
-        " />
-
+        <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
       </div>
 
       {/* HERO */}
-      <section
-        className="
-          relative z-10
-          pt-40
-          pb-24
-          px-6 lg:px-10
-        "
-      >
-
+      <section className="relative z-10 pt-28 sm:pt-36 lg:pt-40 pb-14 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-
-            {/* Voltas Logo */}
-            <div className="mb-10">
-
+            <div className="mb-6 sm:mb-8 lg:mb-10">
               <Image
                 src="/logos/voltas2.png"
                 alt="Voltas"
                 width={220}
                 height={80}
-                className="w-auto h-auto object-contain"
+                className="w-auto h-8 sm:h-10 lg:h-auto object-contain"
               />
-
             </div>
 
-            <h1
-              className="
-                max-w-5xl
-                text-5xl
-                lg:text-7xl
-                font-semibold
-                tracking-tight
-                leading-[0.95]
-              "
-            >
+            <h1 className="max-w-5xl text-3xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[0.95]">
               Voltas
             </h1>
 
-            <p
-              className="
-                mt-8
-                max-w-4xl
-                text-lg
-                leading-relaxed
-                text-zinc-400
-              "
-            >
-              Voltas is one of India’s established air conditioning and
-              engineering brands, offering a broad portfolio of commercial
-              HVAC systems designed for large-scale infrastructure,
-              industrial facilities, and enterprise cooling environments.
+            <p className="mt-5 sm:mt-8 max-w-4xl text-base sm:text-lg leading-relaxed text-zinc-400">
+              Voltas is one of India&#39;s established air conditioning and engineering brands,
+              offering a broad portfolio of commercial HVAC systems designed for large-scale
+              infrastructure, industrial facilities, and enterprise cooling environments.
             </p>
 
           </motion.div>
-
         </div>
-
       </section>
 
-      {/* Overview Section */}
-      <section
-        className="
-          relative z-10
-          px-6 lg:px-10
-          pb-24
-        "
-      >
+      {/* Overview */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 lg:pb-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 items-start">
 
-        <div className="
-          max-w-7xl
-          mx-auto
-          grid
-          grid-cols-1
-          lg:grid-cols-2
-          gap-16
-          items-start
-        ">
-
-          {/* Left */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-
-            <div
-              className="
-                overflow-hidden
-                rounded-3xl
-                border border-white/10
-              "
-            >
-
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+            <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10">
               <Image
                 src="/images/about-hvac.jpg"
                 alt="Voltas HVAC"
                 width={1200}
                 height={800}
-                className="
-                  w-full
-                  h-[500px]
-                  object-cover
-                "
+                className="w-full h-52 sm:h-72 lg:h-[500px] object-cover"
               />
-
             </div>
-
           </motion.div>
 
-          {/* Right */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-
-            <p
-              className="
-                text-[12px]
-                uppercase
-                tracking-[0.3em]
-                text-red-400
-                mb-6
-              "
-            >
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} viewport={{ once: true }}>
+            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Enterprise Cooling Infrastructure
             </p>
-
-            <h2
-              className="
-                text-4xl
-                font-semibold
-                leading-tight
-                mb-8
-              "
-            >
-              Reliable Commercial
-              Cooling Systems
+            <h2 className="text-2xl sm:text-4xl font-semibold leading-tight mb-5 sm:mb-8">
+              Reliable Commercial Cooling Systems
             </h2>
-
-            <p
-              className="
-                text-zinc-400
-                leading-relaxed
-                mb-6
-              "
-            >
-              Voltas provides cooling solutions including VRF systems,
-              chillers, ducted systems, cassette ACs, package units,
-              and centralized commercial air conditioning technologies
-              engineered for reliability and operational efficiency.
+            <p className="text-zinc-400 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+              Voltas provides cooling solutions including VRF systems, chillers, ducted
+              systems, cassette ACs, package units, and centralized commercial air
+              conditioning technologies engineered for reliability and operational efficiency.
             </p>
-
-            <p
-              className="
-                text-zinc-400
-                leading-relaxed
-              "
-            >
-              Voltas solutions are commonly deployed across commercial
-              buildings, industrial facilities, healthcare institutions,
-              hospitality projects, IT parks, educational campuses,
-              and retail infrastructure.
+            <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
+              Voltas solutions are commonly deployed across commercial buildings, industrial
+              facilities, healthcare institutions, hospitality projects, IT parks, educational
+              campuses, and retail infrastructure.
             </p>
-
           </motion.div>
 
         </div>
-
       </section>
 
-      {/* Features */}
-      <section
-        className="
-          relative z-10
-          px-6 lg:px-10
-          pb-28
-        "
-      >
-
+      {/* Advantages */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-28">
         <div className="max-w-7xl mx-auto">
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-
-            <p
-              className="
-                text-[12px]
-                uppercase
-                tracking-[0.3em]
-                text-red-400
-                mb-6
-              "
-            >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Why Choose Voltas
             </p>
-
-            <h2
-              className="
-                text-4xl
-                font-semibold
-                mb-14
-              "
-            >
+            <h2 className="text-2xl sm:text-4xl font-semibold mb-8 sm:mb-14">
               Voltas HVAC Advantages
             </h2>
-
           </motion.div>
 
-          <div
-            className="
-              grid
-              grid-cols-1
-              md:grid-cols-2
-              xl:grid-cols-4
-              gap-6
-            "
-          >
-
-            {[
-              "Trusted Indian engineering expertise",
-              "Commercial cooling infrastructure solutions",
-              "Energy-conscious HVAC technologies",
-              "High ambient cooling performance",
-              "Scalable commercial systems",
-              "Reliable industrial-grade operation",
-              "Wide commercial product portfolio",
-              "Service and maintenance support",
-            ].map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
+            {advantages.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.05,
-                }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 className="
-                  rounded-2xl
+                  rounded-xl sm:rounded-2xl
                   border border-white/10
                   bg-white/[0.03]
-                  p-6
+                  p-5 sm:p-6
+                  transition-all duration-300
                 "
               >
-
-                <div
-                  className="
-                    w-10
-                    h-[2px]
-                    bg-red-600
-                    mb-5
-                  "
-                />
-
-                <p
-                  className="
-                    text-zinc-300
-                    leading-relaxed
-                  "
-                >
-                  {item}
-                </p>
-
+                <div className="w-8 sm:w-10 h-[2px] bg-red-600 mb-4 sm:mb-5" />
+                <p className="text-zinc-300 leading-relaxed text-sm sm:text-base">{item}</p>
               </motion.div>
             ))}
-
           </div>
-
         </div>
-
       </section>
 
       {/* Solutions & Services */}
-      <section
-        className="
-          relative z-10
-          px-6 lg:px-10
-          pb-32
-        "
-      >
-
-        <div className="
-          max-w-7xl
-          mx-auto
-          grid
-          grid-cols-1
-          lg:grid-cols-2
-          gap-8
-        ">
+      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-32">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
 
           {/* Solutions */}
           <motion.div
@@ -359,78 +177,19 @@ export default function VoltasPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="
-              rounded-3xl
-              border border-white/10
-              bg-white/[0.03]
-              p-10
-            "
+            className="rounded-2xl sm:rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-10"
           >
-
-            <p
-              className="
-                text-[12px]
-                uppercase
-                tracking-[0.3em]
-                text-red-400
-                mb-6
-              "
-            >
+            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Voltas HVAC Solutions
             </p>
-
-            <div className="space-y-8">
-
-              <div>
-                <h3 className="text-2xl font-medium mb-3">
-                  VRF Air Conditioning Systems
-                </h3>
-
-                <p className="text-zinc-400 leading-relaxed">
-                  Voltas VRF systems provide multi-zone climate control
-                  for commercial buildings requiring flexible and
-                  efficient cooling infrastructure.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-medium mb-3">
-                  Commercial Chiller Systems
-                </h3>
-
-                <p className="text-zinc-400 leading-relaxed">
-                  Voltas chiller systems are designed for centralized
-                  cooling applications where consistent thermal
-                  performance and operational reliability are important.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-medium mb-3">
-                  Ducted & Package AC Systems
-                </h3>
-
-                <p className="text-zinc-400 leading-relaxed">
-                  Voltas ducted and package systems provide efficient
-                  cooling for large commercial interiors while supporting
-                  clean architectural aesthetics.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-medium mb-3">
-                  Cassette & Tower Air Conditioners
-                </h3>
-
-                <p className="text-zinc-400 leading-relaxed">
-                  Commercial cassette and tower AC systems are suitable
-                  for business environments requiring efficient airflow
-                  and flexible installation.
-                </p>
-              </div>
-
+            <div className="space-y-6 sm:space-y-8">
+              {solutions.map((item) => (
+                <div key={item.title}>
+                  <h3 className="text-lg sm:text-2xl font-medium mb-2 sm:mb-3">{item.title}</h3>
+                  <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">{item.text}</p>
+                </div>
+              ))}
             </div>
-
           </motion.div>
 
           {/* Services */}
@@ -439,70 +198,22 @@ export default function VoltasPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
-            className="
-              rounded-3xl
-              border border-white/10
-              bg-white/[0.03]
-              p-10
-            "
+            className="rounded-2xl sm:rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:p-10"
           >
-
-            <p
-              className="
-                text-[12px]
-                uppercase
-                tracking-[0.3em]
-                text-red-400
-                mb-6
-              "
-            >
+            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Our Voltas HVAC Services
             </p>
-
-            <div className="space-y-5">
-
-              {[
-                "Commercial HVAC planning and consultation",
-                "Thermal load analysis",
-                "Ventilation and duct design",
-                "HVAC installation and execution",
-                "Preventive maintenance and AMC",
-                "Industrial cooling solutions",
-                "HVAC modernization and efficiency upgrades",
-              ].map((service) => (
-                <div
-                  key={service}
-                  className="
-                    flex
-                    items-center
-                    gap-4
-                    border-b border-white/5
-                    pb-5
-                  "
-                >
-
-                  <div
-                    className="
-                      w-2
-                      h-2
-                      rounded-full
-                      bg-red-500
-                    "
-                  />
-
-                  <p className="text-zinc-300">
-                    {service}
-                  </p>
-
+            <div className="space-y-4 sm:space-y-5">
+              {services.map((service) => (
+                <div key={service} className="flex items-center gap-3 sm:gap-4 border-b border-white/5 pb-4 sm:pb-5">
+                  <div className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
+                  <p className="text-zinc-300 text-sm sm:text-base">{service}</p>
                 </div>
               ))}
-
             </div>
-
           </motion.div>
 
         </div>
-
       </section>
 
       <Footer />
