@@ -7,7 +7,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 import residentialHVAC from "./residential-hvac2.jpeg";
-import commercialHVAC from "./commercial-hvac1.jpg";
+import commercialHVAC from "./commercial-hvac2.jpg";
 import cleanRoom from "./clean-room1.jpg";
 import exhaustVentilation from "./exhaust-ventilation1.jpg";
 import hvacMaintenance from "./hvac-maintenance1.jpg";

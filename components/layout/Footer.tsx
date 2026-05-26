@@ -19,7 +19,7 @@ export default function Footer() {
               Commercial HVAC &amp; Enterprise Cooling Solutions
             </h3>
             <p className="mt-4 sm:mt-6 text-zinc-400 leading-relaxed text-sm sm:text-base">
-              Delivering professional Samsung and Voltas HVAC,
+              Delivering professional HVAC,
               enterprise infrastructure, industrial cooling,
               and engineering solutions across commercial and
               industrial environments.
@@ -57,7 +57,7 @@ export default function Footer() {
 
             
               <Image
-                src="/images/email-signature1.png"
+                src="/images/email-signature5.png"
                 alt="DSERVE Contact Information"
                 width={2000}
                 height={1000}
