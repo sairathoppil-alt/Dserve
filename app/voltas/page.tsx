@@ -329,7 +329,7 @@ export default function VoltasPage() {
             </p>
 
             <h2 className="text-2xl sm:text-4xl font-semibold mb-10 sm:mb-14">
-              Voltas Advantages
+              Voltas Advantage
             </h2>
 
           </motion.div>
