@@ -34,8 +34,8 @@ export default function Footer() {
             <div className="flex flex-col gap-3 sm:gap-4">
               {[
                 { href: "/", label: "Home" },
-                { href: "/samsung", label: "Samsung Solutions" },
-                { href: "/voltas",  label: "Voltas Solutions"  },
+                { href: "/samsung", label: "Samsung" },
+                { href: "/voltas",  label: "Voltas"  },
                 { href: "/contact", label: "Contact Us"        },
               ].map((link) => (
                 <Link
@@ -55,20 +55,15 @@ export default function Footer() {
               Company Information
             </p>
 
-            <div className="
-              bg-[#111111] border border-white/5
-              rounded-xl sm:rounded-2xl
-              p-3 sm:p-4
-              flex items-center justify-center
-            ">
+            
               <Image
-                src="/images/email-signature.jpg"
+                src="/images/email-signature1.png"
                 alt="DSERVE Contact Information"
-                width={1200}
-                height={400}
-                className="w-full max-w-[400px] h-auto object-contain rounded-lg sm:rounded-xl"
+                width={2000}
+                height={1000}
+                className="w-full max-w-[600px] h-auto object-contain rounded-lg sm:rounded-xl"
               />
-            </div>
+            
 
             {/* Contact Links */}
             <div className="mt-6 sm:mt-8 space-y-3">

@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const features = [
   "Commercial HVAC Solutions",
-  "Samsung & Voltas Partnerships",
+  "Design & Engineering ",
   "Industrial Cooling Systems",
   "Enterprise Infrastructure",
   "Professional Installation",
@@ -30,19 +30,19 @@ export default function AboutSection() {
               </div>
 
               {/* Heading */}
-              <h2 className="
+              <h4 className="
                 text-3xl sm:text-4xl lg:text-6xl
                 font-bold tracking-tight text-zinc-900
                 leading-[1.05]
               ">
                 Smart Air Conditioning Solutions For Modern Spaces
-              </h2>
+              </h4>
 
               {/* Paragraphs */}
               <p className="mt-6 sm:mt-8 text-base sm:text-lg text-zinc-600 leading-relaxed">
                 DSERVE delivers advanced HVAC and commercial air conditioning
                 solutions tailored for residential, commercial, and enterprise
-                environments through trusted Samsung and Voltas partnerships.
+                environments through trusted partnerships.
               </p>
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-zinc-600 leading-relaxed">
                 From climate control systems and energy-efficient cooling to

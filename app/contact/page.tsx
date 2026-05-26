@@ -49,7 +49,7 @@ export default function ContactPage() {
             {/* Banner image — preserved exactly */}
             <div className="relative w-full h-48 sm:h-64 lg:h-80 overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 mb-10 sm:mb-14">
               <Image
-                src="/images/contact-banner.png"
+                src="/images/contact-banner2.png"
                 alt="Contact DSERVE"
                 fill
                 priority
