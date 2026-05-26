@@ -19,6 +19,21 @@ const advantages = [
 
 const solutions = [
   {
+    title: "Slim One Way Cassette Systems",
+    text: "Minimal ceiling-mounted cooling systems designed for premium modern interiors.",
+    image: "/images/slim-oneway-cassette.png",
+  },
+  {
+    title: "Cassette & Tower Air Conditioners",
+    text: "High airflow commercial AC systems with flexible installation options.",
+    image: "/images/cassette-tower-ac.png",
+  },
+  {
+    title: "Ducted & Package AC Systems",
+    text: "Efficient concealed cooling solutions for commercial interiors.",
+    image: "/images/ducted-package-ac.png",
+  },
+  {
     title: "VRF Air Conditioning Systems",
     text: "Flexible multi-zone cooling solutions for modern commercial buildings.",
     image: "/images/vrf-systems.png",
@@ -27,21 +42,6 @@ const solutions = [
     title: "Commercial Chiller Systems",
     text: "Centralized cooling systems engineered for reliable large-scale performance.",
     image: "/images/commercial-chillers.png",
-  },
-  {
-    title: "Ducted & Package AC Systems",
-    text: "Efficient concealed cooling solutions for commercial interiors.",
-    image: "/images/ducted-package-ac.png",
-  },
-  {
-    title: "Cassette & Tower Air Conditioners",
-    text: "High airflow commercial AC systems with flexible installation options.",
-    image: "/images/cassette-tower-ac.png",
-  },
-  {
-    title: "Slim One Way Cassette Systems",
-    text: "Minimal ceiling-mounted cooling systems designed for premium modern interiors.",
-    image: "/images/slim-oneway-cassette.png",
   },
 ];
 
@@ -54,6 +54,7 @@ export default function VoltasPage() {
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
 
+        {/* Grid */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -63,6 +64,7 @@ export default function VoltasPage() {
           }}
         />
 
+        {/* Glow */}
         <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
 
         <div className="absolute bottom-[-300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-red-600/10 blur-[160px]" />
@@ -117,7 +119,7 @@ export default function VoltasPage() {
 
       </section>
 
-      {/* Overview */}
+      {/* OVERVIEW */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 lg:pb-24">
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 items-start">
@@ -130,14 +132,18 @@ export default function VoltasPage() {
             viewport={{ once: true }}
           >
 
-            <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10">
+            <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black">
 
               <Image
                 src="/images/voltas-main1.jpeg"
                 alt="Voltas HVAC"
                 width={1200}
                 height={800}
-                className="w-full h-52 sm:h-72 lg:h-[500px] object-cover"
+                className="
+                  w-full
+                  h-52 sm:h-72 lg:h-[500px]
+                  object-cover
+                "
               />
 
             </div>
@@ -152,9 +158,7 @@ export default function VoltasPage() {
             viewport={{ once: true }}
           >
 
-            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
-              Enterprise Cooling Infrastructure
-            </p>
+            
 
             <h2 className="text-2xl sm:text-4xl font-semibold leading-tight mb-5 sm:mb-8">
               Reliable Commercial Cooling Systems
@@ -192,9 +196,7 @@ export default function VoltasPage() {
             viewport={{ once: true }}
           >
 
-            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
-              Voltas HVAC Solutions
-            </p>
+            
 
             <h2 className="text-2xl sm:text-4xl font-semibold mb-10 sm:mb-14">
               Commercial Cooling Solutions
@@ -202,14 +204,20 @@ export default function VoltasPage() {
 
           </motion.div>
 
-          {/* Dynamic Sliding Layout */}
+          {/* Dynamic Sliding Panels */}
           <div className="flex flex-col gap-6">
 
             {solutions.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{
+                  opacity: 0,
+                  x: index % 2 === 0 ? -40 : 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                }}
                 transition={{
                   duration: 0.7,
                   delay: index * 0.08,
@@ -226,13 +234,17 @@ export default function VoltasPage() {
                   hover:bg-white/[0.05]
                   transition-all duration-500
                   flex flex-col lg:flex-row
-                  min-h-[320px]
-                  ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}
+                  min-h-[280px] lg:min-h-[320px]
+                  ${
+                    index % 2 !== 0
+                      ? "lg:flex-row-reverse"
+                      : ""
+                  }
                 `}
               >
 
                 {/* Image */}
-                <div className="relative lg:w-[52%] overflow-hidden">
+                <div className="relative lg:w-[48%] overflow-hidden bg-black flex items-center justify-center">
 
                   <Image
                     src={item.image}
@@ -243,13 +255,15 @@ export default function VoltasPage() {
                       w-full
                       h-[260px]
                       lg:h-full
-                      object-cover
+                      object-contain
+                      p-4 sm:p-6
                       transition-transform duration-700
                       group-hover:scale-105
                     "
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
 
                 </div>
 
@@ -282,7 +296,9 @@ export default function VoltasPage() {
 
                 {/* Glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-500/5 via-transparent to-transparent" />
+
                 </div>
 
               </motion.div>
@@ -311,7 +327,7 @@ export default function VoltasPage() {
             </p>
 
             <h2 className="text-2xl sm:text-4xl font-semibold mb-10 sm:mb-14">
-              Voltas HVAC Advantages
+              Voltas Advantages
             </h2>
 
           </motion.div>
