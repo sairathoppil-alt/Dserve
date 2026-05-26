@@ -26,7 +26,7 @@ const solutions = [
   {
     title: "Cassette & Tower Air Conditioners",
     text: "High airflow commercial AC systems with flexible installation options.",
-    image: "/images/cassette-tower-ac.png",
+    image: "/images/cassette-tower-ac1.png",
   },
   {
     title: "Ducted & Package AC Systems",
@@ -36,12 +36,12 @@ const solutions = [
   {
     title: "VRF Air Conditioning Systems",
     text: "Flexible multi-zone cooling solutions for modern commercial buildings.",
-    image: "/images/vrf-systems.png",
+    image: "/images/vrf-systems1.png",
   },
   {
     title: "Commercial Chiller Systems",
     text: "Centralized cooling systems engineered for reliable large-scale performance.",
-    image: "/images/commercial-chillers.png",
+    image: "/images/commercial-chillers1.png",
   },
 ];
 

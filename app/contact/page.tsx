@@ -71,8 +71,7 @@ export default function ContactPage() {
             {/* Sub-heading below image */}
             <p className="max-w-3xl text-base sm:text-lg leading-relaxed text-zinc-400">
               Reach out to DSERVE for commercial HVAC systems, enterprise air conditioning
-              solutions, industrial cooling, Samsung and Voltas consultation, and
-              infrastructure support.
+              solutions, industrial cooling, and infrastructure support.
             </p>
 
           </motion.div>
