@@ -134,17 +134,19 @@ export default function VoltasPage() {
 
             <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black">
 
-              <Image
-                src="/images/voltas-main1.jpeg"
-                alt="Voltas HVAC"
-                width={1200}
-                height={800}
-                className="
-                  w-full
-                  h-52 sm:h-72 lg:h-[500px]
-                  object-cover
-                "
-              />
+            <Image
+  src="/images/voltas-main2.png"
+  alt="Voltas HVAC"
+  width={1200}
+  height={800}
+  className="
+    w-full
+    h-52 sm:h-72 lg:h-[500px]
+    object-contain
+    bg-black
+    p-3 sm:p-4 lg:p-6
+  "
+/>
 
             </div>
 
