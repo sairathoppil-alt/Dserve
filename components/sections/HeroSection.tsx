@@ -10,8 +10,8 @@ const oswald = Oswald({
 });
 
 const brands = [
-  { href: "/samsung", logo: "/logos/samsung3.png" },
-  { href: "/voltas",  logo: "/logos/voltas3.png"  },
+  { href: "/samsung", logo: "/logos/samsung5.png" },
+  { href: "/voltas",  logo: "/logos/voltas6.png"  },
 ];
 
 export default function HeroSection() {

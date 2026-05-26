@@ -20,30 +20,20 @@ const advantages = [
 const solutions = [
   {
     title: "VRF Air Conditioning Systems",
-    text: "Voltas VRF systems provide multi-zone climate control for commercial buildings requiring flexible and efficient cooling infrastructure.",
+    text: "Flexible multi-zone cooling solutions for modern commercial buildings.",
   },
   {
     title: "Commercial Chiller Systems",
-    text: "Voltas chiller systems are designed for centralized cooling applications where consistent thermal performance and operational reliability are important.",
+    text: "Centralized cooling systems engineered for reliable large-scale performance.",
   },
   {
     title: "Ducted & Package AC Systems",
-    text: "Voltas ducted and package systems provide efficient cooling for large commercial interiors while supporting clean architectural aesthetics.",
+    text: "Efficient concealed cooling solutions for commercial interiors.",
   },
   {
     title: "Cassette & Tower Air Conditioners",
-    text: "Commercial cassette and tower AC systems are suitable for business environments requiring efficient airflow and flexible installation.",
+    text: "High airflow commercial AC systems with flexible installation options.",
   },
-];
-
-const services = [
-  "Commercial HVAC planning and consultation",
-  "Thermal load analysis",
-  "Ventilation and duct design",
-  "HVAC installation and execution",
-  "Preventive maintenance and AMC",
-  "Industrial cooling solutions",
-  "HVAC modernization and efficiency upgrades",
 ];
 
 export default function VoltasPage() {
@@ -54,6 +44,7 @@ export default function VoltasPage() {
 
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
+
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -64,10 +55,12 @@ export default function VoltasPage() {
         />
 
         <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
+
       </div>
 
       {/* HERO */}
       <section className="relative z-10 pt-28 sm:pt-36 lg:pt-40 pb-14 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-10">
+
         <div className="max-w-7xl mx-auto">
 
           <motion.div
@@ -76,7 +69,7 @@ export default function VoltasPage() {
             transition={{ duration: 0.8 }}
           >
 
-            {/* Voltas Heading + Logo */}
+            {/* Heading */}
             <div className="flex items-center justify-between gap-6 mb-5 sm:mb-8">
 
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[0.95]">
@@ -110,19 +103,24 @@ export default function VoltasPage() {
           </motion.div>
 
         </div>
+
       </section>
 
       {/* Overview */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 lg:pb-24">
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 items-start">
 
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
+
             <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10">
+
               <Image
                 src="/images/voltas-main.jpeg"
                 alt="Voltas HVAC"
@@ -130,15 +128,19 @@ export default function VoltasPage() {
                 height={800}
                 className="w-full h-52 sm:h-72 lg:h-[500px] object-cover"
               />
+
             </div>
+
           </motion.div>
 
+          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
+
             <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Enterprise Cooling Infrastructure
             </p>
@@ -160,13 +162,16 @@ export default function VoltasPage() {
               hospitality projects, IT parks, educational campuses,
               and retail infrastructure.
             </p>
+
           </motion.div>
 
         </div>
+
       </section>
 
-      {/* Advantages */}
+      {/* Solutions */}
       <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-28">
+
         <div className="max-w-7xl mx-auto">
 
           <motion.div
@@ -175,16 +180,106 @@ export default function VoltasPage() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
+
+            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
+              Voltas HVAC Solutions
+            </p>
+
+            <h2 className="text-2xl sm:text-4xl font-semibold mb-10 sm:mb-14">
+              Commercial Cooling Solutions
+            </h2>
+
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+            {solutions.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.08,
+                }}
+                viewport={{ once: true }}
+                className="
+                  group
+                  overflow-hidden
+                  rounded-2xl sm:rounded-3xl
+                  border border-white/10
+                  bg-white/[0.03]
+                  hover:bg-white/[0.05]
+                  transition-all duration-500
+                "
+              >
+
+                {/* Image */}
+                <div className="relative overflow-hidden">
+
+                  <Image
+                    src={`/images/solution-${index + 1}.jpg`}
+                    alt={item.title}
+                    width={1200}
+                    height={800}
+                    className="
+                      w-full
+                      h-56 sm:h-72
+                      object-cover
+                      transition-transform duration-700
+                      group-hover:scale-105
+                    "
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+                </div>
+
+                {/* Content */}
+                <div className="p-6 sm:p-8">
+
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
+                    {item.text}
+                  </p>
+
+                </div>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Advantages */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-20 sm:pb-28 lg:pb-32">
+
+        <div className="max-w-7xl mx-auto">
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+
             <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
               Why Choose Voltas
             </p>
 
-            <h2 className="text-2xl sm:text-4xl font-semibold mb-8 sm:mb-14">
+            <h2 className="text-2xl sm:text-4xl font-semibold mb-10 sm:mb-14">
               Voltas HVAC Advantages
             </h2>
+
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 auto-rows-fr">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
 
             {advantages.map((item, index) => (
               <motion.div
@@ -197,107 +292,33 @@ export default function VoltasPage() {
                 }}
                 viewport={{ once: true }}
                 className="
-                  rounded-xl sm:rounded-2xl
+                  rounded-2xl
                   border border-white/10
                   bg-white/[0.03]
+                  backdrop-blur-sm
                   p-5 sm:p-6
+                  hover:bg-white/[0.05]
                   transition-all duration-300
-                  h-full
-                  flex flex-col
                 "
               >
-                <div className="w-8 sm:w-10 h-[2px] bg-red-600 mb-4 sm:mb-5" />
 
-                <p className="text-zinc-300 leading-relaxed text-sm sm:text-base flex-1">
-                  {item}
-                </p>
+                <div className="flex items-start gap-4">
+
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-red-500 shrink-0" />
+
+                  <p className="text-zinc-300 leading-relaxed text-sm sm:text-base">
+                    {item}
+                  </p>
+
+                </div>
+
               </motion.div>
             ))}
 
           </div>
-        </div>
-      </section>
-
-      {/* Solutions & Services */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-32">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-
-          {/* Solutions */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="
-              rounded-2xl sm:rounded-3xl
-              border border-white/10
-              bg-white/[0.03]
-              p-6 sm:p-8 lg:p-10
-              h-full
-            "
-          >
-            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
-              Voltas HVAC Solutions
-            </p>
-
-            <div className="space-y-6 sm:space-y-8">
-
-              {solutions.map((item) => (
-                <div key={item.title}>
-                  <h3 className="text-lg sm:text-2xl font-medium mb-2 sm:mb-3">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-
-            </div>
-          </motion.div>
-
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="
-              rounded-2xl sm:rounded-3xl
-              border border-white/10
-              bg-white/[0.03]
-              p-6 sm:p-8 lg:p-10
-              h-full
-            "
-          >
-            <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.3em] text-red-400 mb-4 sm:mb-6">
-              Our Voltas HVAC Services
-            </p>
-
-            <div className="space-y-4 sm:space-y-5">
-
-              {services.map((service) => (
-                <div
-                  key={service}
-                  className="
-                    flex items-center gap-3 sm:gap-4
-                    border-b border-white/5
-                    pb-4 sm:pb-5
-                  "
-                >
-                  <div className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
-
-                  <p className="text-zinc-300 text-sm sm:text-base">
-                    {service}
-                  </p>
-                </div>
-              ))}
-
-            </div>
-          </motion.div>
 
         </div>
+
       </section>
 
       <Footer />
