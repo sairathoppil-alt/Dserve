@@ -84,34 +84,33 @@ export default function VoltasPage() {
 
             {/* Heading */}
             {/* Voltas Hero Brand */}
-<div className="mb-10 sm:mb-14">
+{/* Brand Logo */}
+<div className="mb-6">
 
-<Image
-  src="/logos/voltas6.png"
-  alt="Voltas"
-  width={1400}
-  height={400}
-  priority
-  className="
-    w-full
-    max-w-[900px]
-    lg:max-w-[1100px]
-    h-auto
-    object-contain
-  "
-/>
-
-<div className="mt-6 h-[2px] w-24 bg-red-500" />
+  <Image
+    src="/logos/voltas6.png"
+    alt="Voltas"
+    width={500}
+    height={140}
+    priority
+    className="
+      w-[220px]
+      sm:w-[280px]
+      lg:w-[340px]
+      h-auto
+      object-contain
+    "
+  />
 
 </div>
 
-            {/* Description */}
-            <p className="max-w-4xl text-base sm:text-lg leading-relaxed text-zinc-400">
-              Voltas is one of India&apos;s established air conditioning and
-              engineering brands, offering a broad portfolio of commercial
-              HVAC systems designed for large-scale infrastructure,
-              industrial facilities, and enterprise cooling environments.
-            </p>
+{/* Description */}
+<p className="max-w-4xl text-base sm:text-lg leading-relaxed text-zinc-400">
+  Voltas is one of India&apos;s established air conditioning and
+  engineering brands, offering a broad portfolio of commercial
+  HVAC systems designed for large-scale infrastructure,
+  industrial facilities, and enterprise cooling environments.
+</p>
 
           </motion.div>
 

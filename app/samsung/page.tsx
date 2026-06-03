@@ -84,25 +84,23 @@ export default function SamsungPage() {
 
             {/* Heading */}
            {/* Samsung Logo Hero Heading */}
-<div className="flex justify-center lg:justify-start mb-8 sm:mb-10">
+{/* Samsung Logo */}
+<div className="mb-6">
 
-<Image
-  src="/logos/samsung5.png"
-  alt="Samsung"
-  width={1000}
-  height={300}
-  priority
-  className="
-    w-[280px]
-    sm:w-[420px]
-    md:w-[550px]
-    lg:w-[700px]
-    xl:w-[850px]
-    h-auto
-    object-contain
-    drop-shadow-[0_0_40px_rgba(255,255,255,0.08)]
-  "
-/>
+  <Image
+    src="/logos/samsung5.png"
+    alt="Samsung"
+    width={500}
+    height={140}
+    priority
+    className="
+      w-[220px]
+      sm:w-[280px]
+      lg:w-[340px]
+      h-auto
+      object-contain
+    "
+  />
 
 </div>
 
