@@ -83,27 +83,27 @@ export default function VoltasPage() {
           >
 
             {/* Heading */}
-            <div className="flex items-center justify-between gap-6 mb-5 sm:mb-8">
+            {/* Voltas Hero Brand */}
+<div className="mb-10 sm:mb-14">
 
-              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[0.95]">
-                Voltas
-              </h1>
+<Image
+  src="/logos/voltas6.png"
+  alt="Voltas"
+  width={1400}
+  height={400}
+  priority
+  className="
+    w-full
+    max-w-[900px]
+    lg:max-w-[1100px]
+    h-auto
+    object-contain
+  "
+/>
 
-              <Image
-                src="/logos/voltas2.png"
-                alt="Voltas"
-                width={220}
-                height={80}
-                priority
-                className="
-                  object-contain
-                  h-8 sm:h-10 lg:h-14
-                  w-auto
-                  shrink-0
-                "
-              />
+<div className="mt-6 h-[2px] w-24 bg-red-500" />
 
-            </div>
+</div>
 
             {/* Description */}
             <p className="max-w-4xl text-base sm:text-lg leading-relaxed text-zinc-400">
