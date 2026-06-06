@@ -57,7 +57,7 @@ export default function Footer() {
 
             
               <Image
-                src="/images/email-signature5.png"
+                src="/images/email-signature6.png"
                 alt="DSERVE Contact Information"
                 width={2000}
                 height={1000}
@@ -65,29 +65,7 @@ export default function Footer() {
               />
             
 
-            {/* Contact Links */}
-            <div className="mt-6 sm:mt-8 space-y-3">
-              <a
-                href="tel:+914844870093"
-                className="block text-zinc-400 hover:text-white transition-colors text-sm sm:text-base min-h-[36px] flex items-center"
-              >
-                +91 484 4870093
-              </a>
-              <a
-                href="mailto:dserveecosolutions@gmail.com"
-                className="block text-zinc-400 hover:text-white transition-colors text-sm sm:text-base break-all"
-              >
-                dserveecosolutions@gmail.com
-              </a>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-zinc-400 hover:text-white transition-colors text-sm sm:text-base"
-              >
-                Vyttila, Ernakulam, Kerala
-              </a>
-            </div>
+            
           </div>
 
         </div>
