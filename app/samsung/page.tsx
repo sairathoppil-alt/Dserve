@@ -145,7 +145,7 @@ export default function SamsungPage() {
             >
 
               <Image
-                src="/images/samsung-main1.jpeg"
+                src="/images/samsung-main2.png"
                 alt="Samsung HVAC"
                 width={1200}
                 height={800}
