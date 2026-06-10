@@ -121,23 +121,21 @@ export default function VoltasPage() {
             viewport={{ once: true }}
           >
 
-            <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black">
-
-           < Image
-  src="/images/voltas-main2.png"
-  alt="Voltas HVAC"
-  width={1200}
-  height={800}
-  className="
-    w-full
-    h-52 sm:h-72 lg:h-[500px]
-    object-cover
-    rounded-3xl
-    border border-white/10
-  "
-/>
-
-            </div>
+<div className="overflow-hidden rounded-3xl border border-white/[0.03] bg-black">
+  <Image
+    src="/images/voltas-main2.png"
+    alt="Voltas HVAC"
+    width={1200}
+    height={800}
+    className="
+      w-full
+      h-52 sm:h-72 lg:h-[500px]
+      object-contain
+      bg-black
+      p-2 sm:p-3 lg:p-4
+    "
+  />
+</div>
 
           </motion.div>
 
