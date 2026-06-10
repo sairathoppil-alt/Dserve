@@ -52,24 +52,14 @@ export default function VoltasPage() {
       <Navbar />
 
       {/* Background */}
-      <div className="absolute inset-0 pointer-events-none">
+<div className="absolute inset-0 pointer-events-none">
 
-        {/* Grid */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-            backgroundSize: "90px 90px",
-          }}
-        />
+{/* Glow */}
+<div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
 
-        {/* Glow */}
-        <div className="absolute top-[-200px] left-[-100px] w-[420px] h-[420px] rounded-full bg-red-700/10 blur-[140px]" />
+<div className="absolute bottom-[-300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-red-600/10 blur-[160px]" />
 
-        <div className="absolute bottom-[-300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-red-600/10 blur-[160px]" />
-
-      </div>
+</div>
 
       {/* HERO */}
       <section className="relative z-10 pt-28 sm:pt-36 lg:pt-40 pb-14 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-10">
@@ -133,7 +123,7 @@ export default function VoltasPage() {
 
             <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-black">
 
-            <Image
+           < Image
   src="/images/voltas-main2.png"
   alt="Voltas HVAC"
   width={1200}
@@ -141,9 +131,9 @@ export default function VoltasPage() {
   className="
     w-full
     h-52 sm:h-72 lg:h-[500px]
-    object-contain
-    bg-black
-    p-3 sm:p-4 lg:p-6
+    object-cover
+    rounded-3xl
+    border border-white/10
   "
 />
 
