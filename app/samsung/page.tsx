@@ -144,19 +144,19 @@ export default function SamsungPage() {
               "
             >
 
-              <Image
-                src="/images/samsung-main3.png"
-                alt="Samsung HVAC"
-                width={1200}
-                height={800}
-                className="
-                  w-full
-                  h-52 sm:h-72 lg:h-[500px]
-                  object-contain
-                  bg-black
-                  p-3 sm:p-4 lg:p-6
-                "
-              />
+<Image
+  src="/images/samsung-main2.png"
+  alt="Samsung HVAC"
+  width={1200}
+  height={800}
+  className="
+    w-full
+    h-52 sm:h-72 lg:h-[500px]
+    object-cover
+    rounded-3xl
+    border border-white/10
+  "
+/>
 
             </div>
 
