@@ -67,11 +67,11 @@ export async function POST(req: Request) {
       );
     }
 
-    if (!message || message.trim().length < 20) {
+    if (!message || message.trim().length === 0) {
       return NextResponse.json(
         {
           success: false,
-          message: "Message must be at least 20 characters.",
+          message: "Message is required.",
         },
         { status: 400 }
       );
