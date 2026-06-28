@@ -33,63 +33,133 @@ export default function ContactPage() {
 
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >
-  ) => {
+  const [error, setError] = useState("");
 
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const [emailError, setEmailError] = useState("");
+
+  const [phoneError, setPhoneError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+  
+    const { name, value } = e.target;
+  
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+  
+    if (name === "email") {
+  
+      const emailRegex =
+        /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  
+      if (!value) {
+  
+        setEmailError("");
+  
+      } else if (!emailRegex.test(value)) {
+  
+        setEmailError("Please enter a valid email address.");
+  
+      } else {
+  
+        setEmailError("");
+  
+      }
+  
+    }
+  
+    if (name === "phone") {
+  
+      const cleaned = value.replace(/\D/g, "");
+  
+      if (!value) {
+  
+        setPhoneError("");
+  
+      }
+  
+      else if (
+        !(cleaned.length === 10 ||
+        (cleaned.length === 12 && cleaned.startsWith("91")))
+      ) {
+  
+        setPhoneError(
+          "Please enter a valid Indian mobile number."
+        );
+  
+      }
+  
+      else {
+  
+        setPhoneError("");
+  
+      }
+  
+    }
+  
   };
 
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
-
     e.preventDefault();
+    if (emailError || phoneError) {
+      return;
+    }
+  setError("");
+  setEmailError("");
+  setPhoneError("");
+  setSuccess(false);
 
-    try {
-
+  try {
+  
+   
       setLoading(true);
-
+  
       const response = await fetch("/api/contact", {
-
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-
-        setSuccess(true);
-
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-
-        setTimeout(() => {
-          setSuccess(false);
-        }, 4000);
+  
+      const result = await response.json();
+  
+      console.log("Backend Response:", result);
+  
+      if (!response.ok) {
+        setError(result.message || "Failed to send message.");
+        return;
       }
-
+  
+      setSuccess(true);
+  
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+  
+      setTimeout(() => {
+        setSuccess(false);
+      }, 4000);
+  
     } catch (error) {
 
-      console.error(error);
-
+      console.error("Frontend Error:", error);
+    
+      setError("Unable to connect to the server.");
+    
     } finally {
-
+  
       setLoading(false);
+  
     }
   };
 
@@ -360,6 +430,11 @@ export default function ContactPage() {
                     className={inputClass}
                     required
                   />
+                  {emailError && (
+                    <p className="mt-1 text-sm text-red-400">
+                      {emailError}
+                    </p>
+                  )}
 
                   <input
                     type="tel"
@@ -404,7 +479,11 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={
+                    loading ||
+                    !!emailError ||
+                    !!phoneError
+                  }
                   className="
                     mt-5 sm:mt-6
                     inline-flex items-center justify-center gap-2
@@ -416,6 +495,7 @@ export default function ContactPage() {
                     rounded-xl
                     font-semibold text-sm sm:text-base text-white
                     disabled:opacity-50
+disabled:cursor-not-allowed
                   "
                 >
 
@@ -440,6 +520,17 @@ export default function ContactPage() {
 
                 </button>
 
+                {error && (
+                  <p className="mt-4 text-red-400 text-sm sm:text-base">
+                    {error}
+                  </p>
+                )}
+
+                {error && (
+                  <p className="mt-4 text-red-400 text-sm sm:text-base">
+                    {error}
+                  </p>
+                )}
                 {success && (
                   <p className="mt-4 text-green-400 text-sm sm:text-base">
                     Message sent successfully.
